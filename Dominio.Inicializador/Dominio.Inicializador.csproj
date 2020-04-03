@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EC8F5880-8108-4F13-AB44-8D96B60A6052}</ProjectGuid>
+    <ProjectGuid>{94C51B4D-AA56-4614-8944-4F6A5FD74F3B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebApiTestDDD</RootNamespace>
-    <AssemblyName>WebApiTestDDD</AssemblyName>
+    <RootNamespace>Dominio.Inicializador</RootNamespace>
+    <AssemblyName>Dominio.Inicializador</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
