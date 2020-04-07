@@ -67,9 +67,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Aplicacion.Profile\Aplicacion.Profile.csproj">
+    <ProjectReference Include="..\Aplicacion.Profile\Aplicacion.Profiles.csproj">
       <Project>{b2311835-f80f-49d4-b3f7-0265a36974de}</Project>
-      <Name>Aplicacion.Profile</Name>
+      <Name>Aplicacion.Profiles</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

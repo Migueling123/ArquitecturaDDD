@@ -33,7 +33,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aplicacion.Implementacion",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aplicacion.Inicializador", "Aplicacion.Inicializador\Aplicacion.Inicializador.csproj", "{E1B1F251-46EF-49D5-8771-FFE333C5CA9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aplicacion.Profile", "Aplicacion.Profile\Aplicacion.Profile.csproj", "{B2311835-F80F-49D4-B3F7-0265A36974DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aplicacion.Profiles", "Aplicacion.Profile\Aplicacion.Profiles.csproj", "{B2311835-F80F-49D4-B3F7-0265A36974DE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{EBCA584A-88E4-4396-A8E2-7AD5EEADBC0C}"
 EndProject

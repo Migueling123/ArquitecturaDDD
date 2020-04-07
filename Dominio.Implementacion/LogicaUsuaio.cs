@@ -36,6 +36,7 @@ namespace Dominio.Implementacion
             return pEntidad;
         }
 
+
         public Usuario Eliminar(long pUsuarioId)
         {
             var entidadDB = _usuarioRepositorio.ObtenerPrimero(x => x.UsuarioId == pUsuarioId);
@@ -143,11 +144,22 @@ namespace Dominio.Implementacion
             return _usuarioRepositorio.ObtenerConFiltro(x => x.NombreUsuario.ToUpper().Equals(pNombreUsuario.ToUpper()) && x.Clave == pClaveUsuario).FirstOrDefault();
         }
 
+
+
+
+
         #region Metodos privados
         private bool ValidarExistenciaUsuario(string pNombreUsuario)
         {
             var contador = _usuarioRepositorio.ObtenerConFiltro(x => x.NombreUsuario.ToUpper().Equals(pNombreUsuario.ToUpper())).Count();
             return contador > 0;
+        }
+        #endregion
+
+        #region Dispose
+        public void Dispose()
+        {
+            _usuarioRepositorio.Dispose();
         }
         #endregion
     }

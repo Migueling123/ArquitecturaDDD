@@ -5,10 +5,9 @@ using System.ComponentModel.Composition.Primitives;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
+using Aplicacion.Profiles;
 using AutoMapper;
 using Unity;
-using Unity.Lifetime;
 
 namespace Utilitarios.InC
 {
@@ -35,8 +34,8 @@ namespace Utilitarios.InC
                     aggregateCatalog.Catalogs.Add(dirCat);
                     using (var componsitionContainer = new CompositionContainer(aggregateCatalog))
                     {
-                        IEnumerable<Export> exports = componsitionContainer.GetExport(importDef);
-                        IEnumerable<IModulo> modulos = exports.Select(export => export.value as IModulo).Where(m => m != null);
+                        IEnumerable<Export> exports = componsitionContainer.GetExports(importDef);
+                        IEnumerable<IModulo> modulos = exports.Select(export => export.Value as IModulo).Where(m => m != null);
 
                         var registrar = new RegistrarModulo(contenedor);
 

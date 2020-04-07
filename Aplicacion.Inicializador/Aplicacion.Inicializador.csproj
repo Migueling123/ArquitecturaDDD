@@ -35,6 +35,7 @@
       <HintPath>..\packages\AutoMapper.9.0.0\lib\net461\AutoMapper.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,10 +45,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InicializadorModulo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aplicacion.Core\Aplicacion.Core.csproj">
+      <Project>{ad22408e-fe64-4940-a6f0-584a7a8d9a47}</Project>
+      <Name>Aplicacion.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Aplicacion.Implementacion\Aplicacion.Implementacion.csproj">
+      <Project>{c5c45208-83c9-49f4-a462-4d8229af157d}</Project>
+      <Name>Aplicacion.Implementacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilitarios.InC\Utilitarios.InC.csproj">
+      <Project>{2db11ff2-5b10-43ca-a69c-2a5bea0f2083}</Project>
+      <Name>Utilitarios.InC</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
