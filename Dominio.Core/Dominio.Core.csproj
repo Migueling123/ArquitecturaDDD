@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Persona.cs" />
+    <Compile Include="Clases\RespuestaGenerica.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Contratos\Agregados\IRepositoriosBase.cs" />
     <Compile Include="Contratos\Agregados\IUnidadDeTrabajo.cs" />

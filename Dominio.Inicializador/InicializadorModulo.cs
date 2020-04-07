@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.Composition;
 using Utilitarios.InC;
+using Dominio.Core;
+using Dominio.Implementacion;
 
 namespace Dominio.Inicializador
 {
@@ -8,7 +10,8 @@ namespace Dominio.Inicializador
     {
         public void Initialize(IRegistrarModulo registrar)
         {
-            
+            registrar.RegistrarTipo<ILogicaUsuario, LogicaUsuario>();
+            registrar.RegistrarTipo<ILogicaPersona, LogicaPersona>();
         }
     }
 }

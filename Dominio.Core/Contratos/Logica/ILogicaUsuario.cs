@@ -6,14 +6,14 @@ namespace Dominio.Core
     {
         IEnumerable<Usuario> ListarTodos();
 
-        IEnumerable<Usuario> ListarPorNombre();
+        IEnumerable<Usuario> ListarPorNombre(string pNombreUsuario);
 
         Usuario ValidarUsuario(string pNombreUsuario, string pClaveUsuario);
 
         Usuario ObtenerPorId(long pIdUsuario);
-        Usuario ObtenerPorRut(long pUsuarioRut);
+        Usuario ObtenerPorNombreUsuario(string pNombreUsuario);
         Usuario Crear(Usuario pEntidad);
         Usuario Modificar(Usuario pEntidad);
-        bool Eliminar(long pUsuarioId);
+        Usuario Eliminar(long pUsuarioId);
     }
 }

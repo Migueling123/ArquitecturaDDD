@@ -7,12 +7,12 @@ namespace Dominio.Core
     {
         IEnumerable<Persona> ListarTodos();
 
-        IEnumerable<Persona> ListarPorNombre();
+        IEnumerable<Persona> ListarPorNombre(string pNombre);
 
         Persona ObtenerPorId(long pIdPersona);
         Persona ObtenerPorRut(long pPersonaRut);
         Persona Crear(Persona pEntidad);
         Persona Modificar(Persona pEntidad);
-        bool Eliminar(long pPersonaId);
+        Persona Eliminar(long pPersonaId);
     }
 }

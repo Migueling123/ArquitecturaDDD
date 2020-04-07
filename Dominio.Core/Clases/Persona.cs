@@ -8,6 +8,10 @@ namespace Dominio.Core
 {
     public class Persona
     {
+        public Persona()
+        {
+            RespuestaGenerica = new RespuestaGenerica();
+        }
         [Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long PersonaId { get; set; }
         [Required]
@@ -28,5 +32,11 @@ namespace Dominio.Core
         public bool Vigente { get; set; }
 
         public virtual ICollection<Usuario> Usuario { get; set; }
+
+        #region propiedades no incluidas en la base de datos 
+        [NotMapped]
+        public RespuestaGenerica RespuestaGenerica { get; set; } 
+
+        #endregion
     }
 }
