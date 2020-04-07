@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,7 +42,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InicializadorModulo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dominio.Core\Dominio.Core.csproj">
+      <Project>{707e564d-c6df-4eff-9448-414ed9f3b5a5}</Project>
+      <Name>Dominio.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dominio.Implementacion\Dominio.Implementacion.csproj">
+      <Project>{3392cc27-751f-49a0-b1b0-b26e199b5120}</Project>
+      <Name>Dominio.Implementacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilitarios.InC\Utilitarios.InC.csproj">
+      <Project>{2DB11FF2-5B10-43CA-A69C-2A5BEA0F2083}</Project>
+      <Name>Utilitarios.InC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebApi.IU\WebApi.IU.csproj">
+      <Project>{635151f9-6319-4000-8f0a-2ac9b39ef866}</Project>
+      <Name>WebApi.IU</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

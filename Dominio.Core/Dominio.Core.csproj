@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,7 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Persona.cs" />
+    <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="Contratos\Agregados\IRepositoriosBase.cs" />
+    <Compile Include="Contratos\Agregados\IUnidadDeTrabajo.cs" />
+    <Compile Include="Contratos\Logica\ILogicaPersona.cs" />
+    <Compile Include="Contratos\Logica\ILogicaUsuario.cs" />
+    <Compile Include="Contratos\Repositorios\IPersonaRepositorio.cs" />
+    <Compile Include="Contratos\Repositorios\IUsuarioRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
