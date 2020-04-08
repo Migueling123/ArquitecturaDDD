@@ -58,10 +58,9 @@
       <Project>{2DB11FF2-5B10-43CA-A69C-2A5BEA0F2083}</Project>
       <Name>Utilitarios.InC</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WebApi.IU\WebApi.IU.csproj">
-      <Project>{635151f9-6319-4000-8f0a-2ac9b39ef866}</Project>
-      <Name>WebApi.IU</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

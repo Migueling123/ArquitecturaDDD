@@ -19,21 +19,22 @@ namespace Dominio.Implementacion
             {
                 if (ValidarExistenciaPersona(pEntidad.Rut))
                 {
-                    pEntidad.RespuestaGenerica.Exito = false;
-                    pEntidad.RespuestaGenerica.Mensaje = "El rut del usuario ingresado ya existe en la base de datos";
+                    pEntidad.RespuestaOperacion.Exito = false;
+                    pEntidad.RespuestaOperacion.Mensaje = "El rut del usuario ingresado ya existe en la base de datos";
 
 
                 }
+                pEntidad.FechaCreacion = DateTime.Now;
                 _personaRepositorio.Crear(pEntidad);
                 _personaRepositorio.UnidadDeTrabajo.Confirmar();
-                pEntidad.RespuestaGenerica.Exito = true;
-                pEntidad.RespuestaGenerica.Mensaje = "Usuario creado correctamente";
+                pEntidad.RespuestaOperacion.Exito = true;
+                pEntidad.RespuestaOperacion.Mensaje = "Usuario creado correctamente";
 
             }
             catch (Exception ex)
             {
-                pEntidad.RespuestaGenerica.Exito = false;
-                pEntidad.RespuestaGenerica.Mensaje = "Ocurrio un error al crear el usuario, ::" + ex.Message;
+                pEntidad.RespuestaOperacion.Exito = false;
+                pEntidad.RespuestaOperacion.Mensaje = "Ocurrio un error al crear el usuario, ::" + ex.Message;
             }
             return pEntidad;
         }
@@ -49,19 +50,19 @@ namespace Dominio.Implementacion
                 {
                     entidadDB.Vigente = false;
                     _personaRepositorio.UnidadDeTrabajo.Confirmar();
-                    personaRespuesta.RespuestaGenerica.Exito = true;
-                    personaRespuesta.RespuestaGenerica.Mensaje = "Usuario eliminado correctamente";
+                    personaRespuesta.RespuestaOperacion.Exito = true;
+                    personaRespuesta.RespuestaOperacion.Mensaje = "Usuario eliminado correctamente";
                 }
                 else
                 {
-                    personaRespuesta.RespuestaGenerica.Exito = false;
-                    personaRespuesta.RespuestaGenerica.Mensaje = "Usuario no encontrado";
+                    personaRespuesta.RespuestaOperacion.Exito = false;
+                    personaRespuesta.RespuestaOperacion.Mensaje = "Usuario no encontrado";
                 }
             }
             catch (Exception ex)
             {
-                personaRespuesta.RespuestaGenerica.Exito = false;
-                personaRespuesta.RespuestaGenerica.Mensaje = "Ocurrio un error al eliminar el usuario, ::" + ex.Message;
+                personaRespuesta.RespuestaOperacion.Exito = false;
+                personaRespuesta.RespuestaOperacion.Mensaje = "Ocurrio un error al eliminar el usuario, ::" + ex.Message;
             }
             return personaRespuesta;
         }
@@ -110,20 +111,20 @@ namespace Dominio.Implementacion
                     entidadDB.Email = pEntidad.Email;                    
                     _personaRepositorio.UnidadDeTrabajo.Confirmar();
 
-                    entidadDB.RespuestaGenerica.Exito = true;
-                    entidadDB.RespuestaGenerica.Mensaje = "persona Modificado correctamente";
+                    entidadDB.RespuestaOperacion.Exito = true;
+                    entidadDB.RespuestaOperacion.Mensaje = "persona Modificado correctamente";
                 }
                 else
                 {
-                    entidadDB.RespuestaGenerica.Exito = false;
-                    entidadDB.RespuestaGenerica.Mensaje = "persona no existe en la base de datos";
+                    entidadDB.RespuestaOperacion.Exito = false;
+                    entidadDB.RespuestaOperacion.Mensaje = "persona no existe en la base de datos";
                 }
 
             }
             catch (Exception ex)
             {
-                entidadDB.RespuestaGenerica.Exito = false;
-                entidadDB.RespuestaGenerica.Mensaje = "Ocurrio un problema al realizar la operacion";
+                entidadDB.RespuestaOperacion.Exito = false;
+                entidadDB.RespuestaOperacion.Mensaje = "Ocurrio un problema al realizar la operacion";
 
             }
 

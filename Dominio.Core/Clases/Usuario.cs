@@ -9,7 +9,7 @@ namespace Dominio.Core
     {
         public Usuario()
         {
-            RespuestaGenerica = new RespuestaGenerica();
+            RespuestaOperacion = new RespuestaGenerica();
         }
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long UsuarioId { get; set; }
@@ -25,7 +25,7 @@ namespace Dominio.Core
 
         #region propiedades no incluidas en la base de datos 
         [NotMapped]
-        public RespuestaGenerica RespuestaGenerica { get; set; }
+        public RespuestaGenerica RespuestaOperacion { get; set; }
 
         #endregion
     }

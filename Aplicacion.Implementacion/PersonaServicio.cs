@@ -33,7 +33,17 @@ namespace Aplicacion.Implementacion
 
         public IEnumerable<PersonaDTO> ListarTodos()
         {
-            return _mapper.Map<IEnumerable<PersonaDTO>>(_logicaPersona.ListarTodos());
+            IEnumerable<PersonaDTO> ListadoPersonasDTO;
+            try
+            {
+                var ListadoPersonas = _logicaPersona.ListarTodos();
+                ListadoPersonasDTO = _mapper.Map<IEnumerable<PersonaDTO>>(ListadoPersonas);
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+            return ListadoPersonasDTO;
         }
 
         public PersonaDTO Modificar(PersonaDTO pEntidad)
