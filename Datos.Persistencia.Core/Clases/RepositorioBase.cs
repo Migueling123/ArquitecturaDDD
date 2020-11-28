@@ -11,7 +11,7 @@ namespace Datos.Persistencia.Core
 {
     public class RepositorioBase<Entidad> : IRepositoriosBase<Entidad> where Entidad : class 
     {
-        readonly IContextoUnidadDeTrabajo _unidadDeTrabajo;
+        readonly IContextoUnidadDeTrabajo _unidadDeTrabajo; 
         public IUnidadDeTrabajo UnidadDeTrabajo
         {
             get { return _unidadDeTrabajo; }
@@ -29,7 +29,7 @@ namespace Datos.Persistencia.Core
 
         public void Eliminar(Entidad pEntidadEliminar)
         {
-            _unidadDeTrabajo.SetDeleted<Entidad>(pEntidadEliminar);
+            _unidadDeTrabajo.SetDeleted(pEntidadEliminar);
             _unidadDeTrabajo.Set<Entidad>().Remove(pEntidadEliminar);
         }
 

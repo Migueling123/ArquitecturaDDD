@@ -10,9 +10,13 @@ namespace Dominio.Core
         IEnumerable<Persona> ListarPorNombre(string pNombre);
 
         Persona ObtenerPorId(long pIdPersona);
+
         Persona ObtenerPorRut(long pPersonaRut);
+
         Persona Crear(Persona pEntidad);
+
         Persona Modificar(Persona pEntidad);
+
         Persona Eliminar(long pPersonaId);
     }
 }
